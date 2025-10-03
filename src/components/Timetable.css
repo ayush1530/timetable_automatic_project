@@ -1,0 +1,37 @@
+.timetable {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 800px;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.timetable h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.timetable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.timetable th {
+  background: #003366;
+  color: white;
+}
+
+.timetable tr:nth-child(even) {
+  background: #f9f9f9;
+}
