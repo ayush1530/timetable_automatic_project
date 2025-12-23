@@ -1,36 +1,81 @@
-nav {
-  /* background: #021528;
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; */
-   position: fixed;         /* 🔥 Fixes navbar to top */
+/* ===== Navbar Base ===== */
+.navbar {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #003366;  /* Dark blue */
+  min-height: 60px;
+  background-color: #003366;
   color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-  z-index: 1000;   /* keeps navbar above other content */
-    
+  padding: 0 12px;                /* 🔥 more compact */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
-nav a {
+/* Logo */
+.logo {
+  font-size: 1.1rem;              /* 🔥 slightly smaller */
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ===== Desktop Links ===== */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;                /* 🔥 critical */
+  gap: 1rem;                      /* 🔥 reduced gap */
+  margin-left: auto;
+  align-items: center;
+  max-width: 75%;                 /* 🔥 prevents overflow */
+}
+
+.nav-links a {
   color: #fff;
-  margin-right: 1.5rem;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 0.9rem;              /* 🔥 smaller text */
+  white-space: nowrap;
 }
 
-nav a:hover {
-  color: #ffcc00; /* gold hover */
+.nav-links a:hover {
+  color: #ffcc00;
 }
 
-nav h2{ 
-    color: white;
+/* ===== Mobile Menu Button ===== */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* ===== Tablet & Mobile ===== */
+@media (max-width: 1100px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #003366;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }

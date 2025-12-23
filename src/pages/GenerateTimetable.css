@@ -1,0 +1,106 @@
+.timetable-page {
+  background: linear-gradient(135deg, #f0f7ff, #eaf3ff);
+  min-height: 100vh;
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.dropdowns-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.dropdown {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 180px;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 2fr;
+  gap: 20px;
+}
+
+.side-box,
+.middle-box,
+.timetable-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.side-box h3,
+.middle-box h3,
+.timetable-box h3 {
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.side-box ul,
+.middle-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.side-box li,
+.middle-box li {
+  background: #f7faff;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.generate-btn {
+  background: #004aad;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  background: #0066ff;
+}
+
+.timetable-box table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.timetable-box th,
+.timetable-box td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.timetable-box th {
+  background: #004aad;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}

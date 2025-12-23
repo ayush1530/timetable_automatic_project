@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import GenerateTimetable from "./pages/GenerateTimetable";
 import ViewTimetable from "./pages/ViewTimetable";
 import About from "./pages/About";
+import Faculty from "./pages/Faculty";
+import Subjects from "./pages/Subject";
 import "./App.css";
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
           <Route path="/generate" element={<GenerateTimetable />} />
           <Route path="/view" element={<ViewTimetable />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faculty" element={<Faculty />} />
+          <Route path="/subjects" element={<Subjects />} />
         </Routes>
       </div>
       <Footer />
